@@ -5,7 +5,7 @@
 2. Download '**compose.yml**' from this repository.
 3. Open Terminal and nevigate using '**cd**' to the directory where '**compose.yml**' file is located.
 4. execute the command : `docker-compose up`
-5. Once the Docker Compose setup is complete, you should be able to access the bisbis10 Restaurant Management System.
+5. Once the Docker Compose setup is complete, you should be able to access the restbis Restaurant Management System.
 
 ## Overview
 The restbis restaurant management system is a backend service designed to handle various operations related to restaurants, their dishes, and ratings. The system aims to provide a comprehensive platform for managing restaurant data, including details about the restaurants, their cuisines, dishes, and customer ratings.
