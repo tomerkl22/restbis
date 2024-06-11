@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: bisbis10
+      POSTGRES_PASSWORD: bisbis10
+      POSTGRES_DB: bisbis10
+  #  volumes:
+   #   - type: bind
+   #     source: ./data
+   #     target: /var/lib/postgresql/data --> in case u need to save data to local storage
+    ports:
+      - target: 5432
+        published: 5432
+        protocol: tcp
+
+  spring-app:
+    image: tomerkl22/bisbis10-image:1.0
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/bisbis10
+      SPRING_DATASOURCE_USERNAME: bisbis10
+      SPRING_DATASOURCE_PASSWORD: bisbis10
