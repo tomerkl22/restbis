@@ -38,19 +38,19 @@ The system is built using Java Spring Boot, leveraging its robust framework for 
 
 | API Description           | Endpoint               | Request Body                          | Response Status | Response Body |
 |---------------------------|------------------------|---------------------------------------|-----------------|---------------|
-| Add a restaurant rating   | POST /ratings          | {"restaurantId": 2, "rating":3.3}     | 200 OK          |               |
+| Add a restaurant rating   | POST /ratings          | {"restaurantId": 3, "rating":4.3}     | 200 OK          |               |
 
 ### Order APIs
 
 | API Description           | Endpoint               | Request Body                          | Response Status | Response Body |
 |---------------------------|------------------------|---------------------------------------|-----------------|---------------|
-| Order    | POST /order          | {"restaurantId": 2, "orderItems":[{"dishId":12,"amount":1},{"dishId":14,"amount":1} ]} ]   | 200 OK          |  {orderId:"ef401fc8-d545-424b-928d-4789cd47bb6e"}             |
+| Order    | POST /order          | {"restaurantId": 2, "orderItems":[{"dishId":22,"amount":1},{"dishId":14,"amount":1} ]} ]   | 200 OK          |  {orderId:"ef401fc8-d545-424b-928d-4789cd47bb6e"}             |
 
 ### Dishes APIs
 
 | API Description           | Endpoint                | Request Body                             | Response Status | Response Body                                                     |
 |---------------------------|-------------------------|------------------------------------------|-----------------|------------------------------------------------------------------|
-| Add a dish                | POST /restaurants/{id}/dishes | {"name":"Shakshuka","description":"Great one","price": 34} | 201 CREATED     |                                                                  |
+| Add a dish                | POST /restaurants/{id}/dishes | {"name":"Shakshuka","description":"Great","price": 24} | 201 CREATED     |                                                                  |
 | Update a dish             | PUT /restaurants/{id}/dishes/{dishId} | {"description":"Great one","price": 34} | 200 OK          |                                                                  |
 | Delete a dish             | DELETE /restaurants/{id}/dishes/{dishId} |                                        | 204 No Content  |                                                                  |
 | Get dishes by a restaurant| GET /restaurants/{id}/dishes  |                                         | 200 OK          | [{"id":"1","name":"Humus","description":"Good one","price": 48}] |
